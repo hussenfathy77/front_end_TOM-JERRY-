@@ -1,0 +1,61 @@
+/* Shared styles for Classes & Staff management (builds on UserManagement.css / um-* classes) */
+.mg-body{padding:24px 28px 36px}
+.mg-stats{grid-template-columns:repeat(4,1fr)}
+.um-stat-icon.green{background:#e6fbf2;color:#18a778}
+.mg-filters{flex-wrap:wrap}
+.mg-filters .um-search{min-width:220px}
+.mg-table{min-width:820px}
+.mg-table th,.mg-table td{width:auto!important}
+.mg-table th:first-child{width:26%!important}
+.mg-table th:last-child{width:90px!important}
+.mg-person{display:inline-flex;align-items:center;gap:8px;color:#2f3d52;font-weight:700}
+.mg-person .um-avatar{width:26px;height:26px;font-size:10px}
+.mg-muted{color:#9aa6b6}
+.mg-phone{display:inline-flex;align-items:center;gap:6px}
+.mg-chip{display:inline-flex;align-items:center;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:800}
+.mg-chip.ok{background:#e5f7ec;color:#2a7e52}
+.mg-chip.warn{background:#fff3de;color:#c27a12}
+.mg-chip.full{background:#ffebef;color:#c9496b}
+.mg-chip.role{background:#e5f3ff;color:#2b76b0}
+.mg-chip.role-alt{background:#f0e4ff;color:#8a46bd}
+.um-avatar.mint{background:#dcf8ed;color:#159b77}
+.um-avatar.gold{background:#fff1c9;color:#bd8617}
+.um-avatar.lavender{background:#e9e9ff;color:#625fe3}
+.um-avatar.purple{background:#f0e4ff;color:#9c50d0}
+.mg-banner{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding:12px 14px;border:1px solid #fad4d4;border-radius:12px;background:#fff2f2;color:#b42f2f;font-size:13px}
+.mg-banner span{flex:1}
+.mg-banner button{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border:1px solid #e9b3b3;border-radius:8px;background:#fff;color:#b42f2f;font-weight:700}
+.mg-empty{display:flex;flex-direction:column;align-items:center;gap:8px;color:#8594a8;padding:18px 0;white-space:normal}
+.mg-empty b{color:#4c5b73;font-size:14px}
+.mg-skeleton-row td{height:54px}
+.mg-skeleton{display:block;height:16px;border-radius:8px;background:linear-gradient(90deg,#eef2f6 25%,#f7f9fb 50%,#eef2f6 75%);background-size:200% 100%;animation:mgShimmer 1.2s infinite}
+@keyframes mgShimmer{to{background-position:-200% 0}}
+/* modal + forms */
+.mg-modal{width:min(100%,520px);max-height:calc(100vh - 40px);overflow-y:auto}
+.mg-modal-title{display:flex;align-items:center;gap:12px}
+.mg-modal-title>span{width:38px;height:38px;border-radius:11px;background:#e6fbf2;color:#18a778;display:grid;place-items:center;flex:none}
+.mg-modal .um-modal-heading{align-items:center}
+.mg-modal .um-modal-heading h2{text-align:left;margin:0 0 3px}
+.mg-form{display:flex;flex-direction:column;gap:12px}
+.mg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mg-field{display:block;margin:0;letter-spacing:0}
+.mg-label{display:block;color:#45546b;font-size:12px;font-weight:700}
+.mg-label i{color:#e4576f;font-style:normal}
+.mg-field input,.mg-field select{width:100%;height:36px;margin-top:5px;padding:0 12px;border:1px solid #dee4eb;border-radius:8px;background:#fff;color:#34445c;font:inherit;font-size:13px;outline:0}
+.mg-field input:focus,.mg-field select:focus{border-color:#2d835d}
+.mg-field.has-error input,.mg-field.has-error select{border-color:#e4576f;background:#fff8f9}
+.mg-error{display:block;margin-top:4px;color:#be123c;font-size:11px;font-weight:600}
+.mg-hint{display:block;margin-top:4px;color:#8493a7;font-size:11px}
+.mg-note{margin:0}
+.mg-form-error{padding:10px 12px;border:1px solid #fad4d4;border-radius:9px;background:#fff2f2;color:#b42f2f;font-size:12px;font-weight:600}
+.mg-form .um-modal-actions{margin-top:6px}
+.mg-form .um-modal-actions button:disabled{opacity:.6;cursor:not-allowed}
+/* toast */
+.mg-toast{position:fixed;z-index:80;right:24px;bottom:24px;max-width:min(420px,calc(100vw - 32px));display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(27,43,69,.2);border:1px solid}
+.mg-toast.success{background:#e5f7ec;color:#1f6b45;border-color:#bfe5cf}
+.mg-toast.error{background:#fff2f2;color:#b42f2f;border-color:#f3c3c3}
+.mg-toast span{flex:1}
+.mg-toast button{color:inherit;opacity:.7;display:grid;place-items:center}
+@media(max-width:1100px){.mg-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.mg-body{padding:20px 18px}}
+@media(max-width:640px){.mg-body{padding:18px 14px}.mg-stats{grid-template-columns:1fr}.mg-row{grid-template-columns:1fr}.um-title-row{flex-direction:column;align-items:flex-start}.mg-toast{left:16px;right:16px;bottom:16px}}
